@@ -37,13 +37,10 @@ a {
     flex-direction: column;
 }
 
-.sticky-header {
-    padding: 1rem 0;
-    background-color: #fff;
-    position: fixed;
-    width: 100%;
-    box-shadow: var(--main-box-shadow);
-}
+
+
+
+
 
 .container {
     background-color: #fff;
@@ -291,7 +288,7 @@ header .container {
     color: #fff;
 }
 
-.tf-left .feature span {
+.tf-left .feature a {
     margin-left: 1rem;
     font-size: 1.3rem;
     color: #fff;
@@ -446,6 +443,11 @@ header .container {
 
 .logo-slider .slick-slide {
     margin: 45px;
+}
+
+.slick-next,
+.slick-prev {
+    z-index: 1;
 }
 
 .slick-dots li.slick-active button:before {
@@ -1012,6 +1014,196 @@ svg {
 
 
 
+/* **************************************** pricing page ****************************************  */
+
+.pricing {
+    position: relative;
+    width: 100%;
+    /* margin-top: 7rem; */
+}
+
+.pricing-header-container {
+    position: relative;
+    width: 100%;
+    z-index: 10;
+    height: 250px;
+    margin-top: 6rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #fff;
+    background-image: url(img/bggggg.svg);
+    background-position: center;
+}
+
+.pricing-header-container h1 {
+    font-size: 3rem;
+    color: var(--main-clr-blue);
+    background-color: #fff;
+    padding: 1rem 2rem;
+    border-radius: 15px;
+    box-shadow: var(--main-box-shadow);
+}
+
+.pricing-plan-container {
+    position: relative;
+    max-width: 93rem;
+    width: 100%;
+    z-index: 10;
+    margin: 0 auto;
+    margin-top: 6rem;
+    /* margin-bottom: 6rem; */
+    display: flex;
+    align-items: stretch;
+    justify-content: center;
+}
+
+.price-col {
+    background-color: #fff;
+    box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
+    padding: 2rem;
+    flex-grow: 1;
+    flex-basis: 0;
+    max-width: 27%;
+    border-radius: 15px;
+}
+
+.price-col.recommended {
+    position: relative;
+    background-color: var(--main-clr-blue);
+    box-shadow: rgba(17, 12, 46, 0.4) 0px 48px 100px 0px;
+    color: #fff;
+    margin-top: -1.5rem;
+    padding-top: 3.5rem;
+    margin-bottom: -1.5rem;
+    padding-bottom: 3.5rem;
+}
+
+.price-col:first-child {
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+}
+
+.price-col:last-child {
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+}
+
+.price-header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-weight: bold;
+}
+
+.price {
+    font-size: 3.5rem;
+    display: flex;
+}
+
+.dollar-sign {
+    font-size: 1.5rem;
+    margin-right: 0.25rem;
+}
+
+.per-month {
+    font-size: 0.85rem;
+    align-self: flex-end;
+    margin-bottom: 1.1rem;
+    text-transform: uppercase;
+}
+
+.plan-name {
+    text-transform: uppercase;
+    font-size: 1.2rem;
+    margin-top: 1rem;
+    margin-bottom: 0;
+}
+
+.divider {
+    height: 1px;
+    width: 100%;
+    background-color: #69c6ff;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+
+
+.plan-feature {
+    display: flex;
+    align-items: center;
+    margin: 0.5rem;
+    font-size: 1.1rem;
+}
+
+.plan-feature i {
+    height: 1.1em;
+    width: 1.1em;
+    margin-right: 0.5em;
+}
+
+.plan-feature.inactive {
+    color: #999;
+    text-decoration-line: line-through;
+}
+
+.most-recommended {
+    position: absolute;
+    top: 0;
+    right: 6rem;
+    left: 6rem;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+    background-color: var(--main-clr-light-blue);
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.purchase-btn {
+    width: 100%;
+    color: #fff;
+    border-radius: 10px;
+    margin-top: 2rem;
+    padding: 0.75rem 1rem;
+    background-color: var(--main-clr-blue);
+    border: none;
+    cursor: pointer;
+    font-size: 1.2rem;
+    transition: 150ms;
+    transform: scale(1);
+}
+
+.price-col.recommended .purchase-btn {
+    background-color: var(--main-clr-light-blue);
+}
+
+.purchase-btn:hover,
+.purchase-btn:focus {
+    transform: scale(1.05);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 /* footer */
@@ -1083,19 +1275,19 @@ svg {
 }
 
 .social-logos .icon {
-    font-size: 3rem;
+    font-size: 2rem;
     margin: 1px;
-    padding: 1rem 2rem;
+    padding: 0.5rem 1rem;
     color: rgb(199, 197, 197);
     background-color: var(--main-clr-blue);
     transition: 0.5s;
 }
 
 .social-logos .icon:hover {
-    font-size: 4rem;
+    font-size: 2.3rem;
     background-color: #0c1b30;
     color: #fff;
-    border-radius: 50%;
+    border-radius: 15px;
 }
 
 

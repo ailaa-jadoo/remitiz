@@ -1,0 +1,16 @@
+header {
+  padding: 1rem 0;
+  background-color: #fff;
+  position: fixed;
+  width: 100%;
+  /* box-shadow: var(--main-box-shadow); */
+  transition: all 300ms ease-in-out;
+}
+
+.scroll-down header {
+  transform: translate3d(0, -100%, 0);
+}
+
+.scroll-up header {
+  filter: drop-shadow(0 -10px 20px rgb(170, 170, 170));
+}/*# sourceMappingURL=headerStyle.css.map */
