@@ -5,7 +5,32 @@ $('.comment-slider').slick({
     autoplay: true,
     autoplaySpeed: 5000,
     dots: true,
-    arrow: true
+    arrow: true,
+    responsive: [
+        {
+            breakpoint: 1024,
+            settings: {
+                slidesToShow: 2,
+                slidesToScroll: 1,
+                infinite: true,
+                dots: true
+            }
+        },
+        {
+            breakpoint: 600,
+            settings: {
+                slidesToShow: 1,
+                slidesToScroll: 1
+            }
+        },
+        {
+            breakpoint: 480,
+            settings: {
+                slidesToShow: 1,
+                slidesToScroll: 1
+            }
+        }
+    ]
 });
 
 $('.logo-slider').slick({
@@ -15,7 +40,32 @@ $('.logo-slider').slick({
     autoplay: true,
     autoplaySpeed: 5000,
     dots: true,
-    arrow: true
+    arrow: true,
+    responsive: [
+        {
+            breakpoint: 1150,
+            settings: {
+                slidesToShow: 3,
+                slidesToScroll: 1,
+                infinite: true,
+                dots: true
+            }
+        },
+        {
+            breakpoint: 850,
+            settings: {
+                slidesToShow: 2,
+                slidesToScroll: 1
+            }
+        },
+        {
+            breakpoint: 480,
+            settings: {
+                slidesToShow: 1,
+                slidesToScroll: 1
+            }
+        }
+    ]
 });
 
 $('#f-1').hover(function () {
@@ -71,38 +121,6 @@ $('#tf-3').hover(function () {
 
 
 
-
-
-const body = document.body;
-let lastScroll = 0;
-
-window.addEventListener("scroll", () => {
-    const currentScroll = window.pageYOffset;
-    if (currentScroll <= 0) {
-        body.classList.remove("scroll-up");
-        return;
-    }
-
-    if (currentScroll > lastScroll && !body.classList.contains("scroll-down")) {
-        body.classList.remove("scroll-up");
-        body.classList.add("scroll-down");
-    } else if (currentScroll < lastScroll && body.classList.contains("scroll-down")) {
-        body.classList.remove("scroll-down");
-        body.classList.add("scroll-up");
-    }
-    lastScroll = currentScroll;
-});
-
-
-
-
-
-
-
-
-
-
-
 qaItems = document.querySelectorAll('.QA-item');
 
 qaItems.forEach((qaItem) => {
@@ -110,3 +128,23 @@ qaItems.forEach((qaItem) => {
         qaItem.classList.toggle('active');
     })
 })
+
+
+
+
+
+
+
+
+
+
+
+// ***************************************************** For Responsive ***************************************************** //
+
+big_wrapper = document.querySelector(".big-wrapper");
+hamburger_menu = document.querySelector(".hamburger-menu");
+
+
+hamburger_menu.addEventListener("click", () => {
+    big_wrapper.classList.toggle("active");
+});
