@@ -1,3 +1,21 @@
+
+// for ream more and less
+
+$(document).ready(function () {
+    $(".invisible-content").hide();
+    $(document).on('click', "#rm-btn", function () {
+        const moreLessBtn = $(".invisible-content").is(":visible") ? 'Read more' : 'Read less';
+        $(this).text(moreLessBtn)
+        $(this).parent(".box").find(".invisible-content").toggle()
+        $(this).parent(".box").find(".visible-content").toggle()
+    })
+})
+
+
+
+
+// slick slider
+
 $('.comment-slider').slick({
     infinite: true,
     slidesToShow: 2,
@@ -32,6 +50,7 @@ $('.comment-slider').slick({
         }
     ]
 });
+
 
 $('.logo-slider').slick({
     infinite: true,
@@ -68,6 +87,11 @@ $('.logo-slider').slick({
     ]
 });
 
+
+
+
+// hovering over top feature on home page
+
 $('#f-1').hover(function () {
     $('.tf-img-1').css("opacity", "1")
     $('.tf-img-2').css("opacity", "0")
@@ -99,6 +123,8 @@ $('#f-4').hover(function () {
 
 
 
+// hovering over transaction on feature page
+
 $('#tf-1').hover(function () {
     $('.trans-img-1').css("opacity", "1")
     $('.trans-img-2').css("opacity", "0")
@@ -120,6 +146,7 @@ $('#tf-3').hover(function () {
 
 
 
+// For faq page
 
 qaItems = document.querySelectorAll('.QA-item');
 

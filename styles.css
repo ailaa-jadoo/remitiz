@@ -591,11 +591,15 @@ button.slick-prev.slick-arrow:before {
     width: 100%;
     z-index: 10;
     margin: 0 auto;
-    margin-top: 5rem;
-    margin-bottom: 5rem;
+    /* margin-top: 5rem;
+    margin-bottom: 5rem; */
     padding: 3rem 4rem;
     border-radius: 15px;
     box-shadow: var(--main-box-shadow);
+}
+
+.gap-container {
+    margin-bottom: 6rem;
 }
 
 .feature-grid {
@@ -1360,6 +1364,10 @@ svg {
         max-width: 33%;
     }
 
+    .pricing-header-container h1 {
+        font-size: 2.7rem;
+    }
+
     .faq {
         margin-top: 12rem;
         margin-bottom: 8rem;
@@ -1529,6 +1537,42 @@ svg {
         padding: 0.8rem 1.8rem;
     }
 
+    .pricing-header-container h1 {
+        font-size: 2.5rem;
+    }
+
+    .price {
+        font-size: 3rem;
+    }
+
+    .dollar-sign {
+        font-size: 1.5rem;
+        margin-right: 0.2rem;
+    }
+
+    .per-month {
+        font-size: 0.85rem;
+    }
+
+    .plan-name {
+        font-size: 1.2rem;
+    }
+
+    .plan-feature {
+        margin: 0.5rem;
+        font-size: 1rem;
+    }
+
+    .most-recommended {
+        font-size: 0.9rem;
+        right: 5rem;
+        left: 5rem;
+    }
+
+    .purchase-btn {
+        font-size: 1.2rem;
+    }
+
     .footer-container h3 {
         font-size: 1rem;
         margin-bottom: 1rem;
@@ -1547,7 +1591,114 @@ svg {
     }
 }
 
+@media (max-width: 1100px) {
+    .feature-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .mtc-left {
+        order: 1;
+    }
+
+    .mtc-right {
+        order: 2;
+    }
+
+    .sc-left {
+        order: 2;
+    }
+
+    .sc-right {
+        order: 1;
+    }
+
+    .feature-grid-show {
+        grid-template-columns: 1fr;
+    }
+
+    .trans-left {
+        display: flex;
+    }
+
+    .trans-left .trans-feature {
+        height: 12rem;
+        width: 30%;
+    }
+
+    .trans-left .trans-feature:not(:last-child) {
+        margin-right: 5%;
+    }
+
+
+    .trans-left .trans-feature span {
+        font-size: 0.9rem;
+    }
+
+    .trans-right {
+        height: 30rem;
+    }
+
+    .trans-right img {
+        margin-top: -4rem;
+        position: absolute;
+        width: 90%;
+        height: 40%;
+        margin: 0 auto;
+        transition: opacity 2s;
+    }
+
+    .api-left {
+        order: 2;
+    }
+
+    .api-right {
+        order: 1;
+    }
+
+    .easy-left {
+        order: 1;
+    }
+
+    .easy-right {
+        order: 2;
+    }
+
+    .report-left {
+        order: 2;
+    }
+
+    .report-right {
+        order: 1;
+    }
+
+    .secure-left {
+        order: 1;
+    }
+
+    .secure-right {
+        order: 2;
+    }
+
+    .access-left {
+        order: 2;
+    }
+
+    .access-right {
+        order: 1;
+    }
+
+    .support-left {
+        order: 1;
+    }
+
+    .support-right {
+        order: 2;
+    }
+
+}
+
 @media (max-width: 1000px) {
+
     .QA-link {
         font-size: 1.15rem;
         padding: 1rem 0;
@@ -1594,6 +1745,86 @@ svg {
     }
 }
 
+@media (max-width: 950px) {
+    .pricing-header-container h1 {
+        font-size: 2.3rem;
+    }
+}
+
+@media (max-width: 900px) {
+    .pricing-plan-container {
+        flex-direction: column;
+        align-items: center;
+        margin-top: 5rem;
+        margin-bottom: 5rem;
+    }
+
+    .price-col {
+        max-width: 90%;
+        width: 45%;
+        box-shadow: rgba(17, 12, 46, 0.2) 0px 48px 100px 0px;
+    }
+
+    .price-col.recommended {
+        max-width: 90%;
+        width: 50%;
+        padding-left: 3rem;
+        padding-right: 3rem;
+        margin-top: 0;
+        margin-bottom: 0;
+    }
+
+    .price-col:not(:last-child) {
+        margin-bottom: 3rem;
+    }
+
+    .price-col:first-child {
+        border-top-right-radius: 15px;
+        border-bottom-right-radius: 15px;
+    }
+
+    .price-col:last-child {
+        border-top-left-radius: 15px;
+        border-bottom-left-radius: 15px;
+    }
+
+    .pricing-header-container h1 {
+        font-size: 2rem;
+    }
+
+    .price {
+        font-size: 3.5rem;
+    }
+
+    .dollar-sign {
+        font-size: 1.5rem;
+        margin-right: 0.2rem;
+    }
+
+    .per-month {
+        font-size: 0.95rem;
+    }
+
+    .plan-name {
+        font-size: 1.3rem;
+    }
+
+    .plan-feature {
+        margin: 0.5rem;
+        font-size: 1.1rem;
+    }
+
+    .most-recommended {
+        font-size: 0.9rem;
+        right: 5rem;
+        left: 5rem;
+    }
+
+    .purchase-btn {
+        font-size: 1.2rem;
+    }
+}
+
 @media (max-width: 850px) {
 
     header {
@@ -1607,6 +1838,46 @@ svg {
 
     .content {
         margin-top: 5rem;
+    }
+
+    .pricing-header-container {
+        margin-top: 5rem;
+    }
+
+    .pricing-header-container h1 {
+        font-size: 1.7rem;
+    }
+
+    .price {
+        font-size: 3rem;
+    }
+
+    .dollar-sign {
+        font-size: 1.4rem;
+        margin-right: 0.2rem;
+    }
+
+    .per-month {
+        font-size: 0.85rem;
+    }
+
+    .plan-name {
+        font-size: 1.2rem;
+    }
+
+    .plan-feature {
+        margin: 0.5rem;
+        font-size: 1rem;
+    }
+
+    .most-recommended {
+        font-size: 0.9rem;
+        right: 5rem;
+        left: 5rem;
+    }
+
+    .purchase-btn {
+        font-size: 1.2rem;
     }
 
     .faq-container {
@@ -1643,6 +1914,50 @@ svg {
 }
 
 @media (max-width: 700px) {
+
+    .pricing-header-container h1 {
+        font-size: 1.5rem;
+    }
+
+    .price-col {
+        width: 50%;
+    }
+
+    .price-col.recommended {
+        width: 55%;
+    }
+
+    .price {
+        font-size: 2.8rem;
+    }
+
+    .dollar-sign {
+        font-size: 1.3rem;
+        margin-right: 0.2rem;
+    }
+
+    .per-month {
+        font-size: 0.85rem;
+    }
+
+    .plan-name {
+        font-size: 1.1rem;
+    }
+
+    .plan-feature {
+        margin: 0.5rem;
+        font-size: 0.9rem;
+    }
+
+    .most-recommended {
+        font-size: 0.9rem;
+        right: 5rem;
+        left: 5rem;
+    }
+
+    .purchase-btn {
+        font-size: 1.2rem;
+    }
 
     .QA-item {
         padding: 1rem 1rem;
@@ -1718,6 +2033,30 @@ svg {
 }
 
 @media (max-width: 600px) {
+
+    .pricing-plan-container {
+        margin-top: 3rem;
+        margin-bottom: 3rem;
+    }
+
+    .pricing-header-container {
+        height: 200px;
+    }
+
+    .pricing-header-container h1 {
+        font-size: 1.3rem;
+        text-align: center;
+        padding: 1rem 1.5rem;
+    }
+
+    .price-col {
+        width: 55%;
+    }
+
+    .price-col.recommended {
+        width: 60%;
+    }
+
     .social-logos .icon {
         font-size: 1.5rem;
         margin: 1px;
@@ -1748,6 +2087,53 @@ svg {
 }
 
 @media (max-width: 500px) {
+
+    .pricing-header-container h1 {
+        font-size: 1.3rem;
+        max-width: 90%;
+    }
+
+    .price-col {
+        width: 60%;
+    }
+
+    .price-col.recommended {
+        width: 65%;
+    }
+
+    .price {
+        font-size: 2.5rem;
+    }
+
+    .dollar-sign {
+        font-size: 1.1rem;
+        margin-right: 0.2rem;
+    }
+
+    .per-month {
+        font-size: 0.7rem;
+        margin-bottom: 0.9rem;
+    }
+
+    .plan-name {
+        font-size: 1rem;
+    }
+
+    .plan-feature {
+        margin: 0.5rem;
+        font-size: 0.8rem;
+    }
+
+    .most-recommended {
+        font-size: 0.85rem;
+        right: 5rem;
+        left: 5rem;
+    }
+
+    .purchase-btn {
+        font-size: 1rem;
+    }
+
     .container {
         padding: 0 0.5rem;
     }
@@ -1822,6 +2208,18 @@ svg {
     }
 }
 
+@media (max-width: 450px) {
+    .price-col {
+        width: 70%;
+    }
+
+    .price-col.recommended {
+        width: 75%;
+        padding: 2rem;
+        padding-top: 3rem;
+    }
+}
+
 @media (max-width: 430px) {
     .social-logos .icon {
         font-size: 1.19rem;
@@ -1852,5 +2250,48 @@ svg {
 
     .tff-buttons .btn-2 {
         padding: 0.4rem 0.6rem;
+    }
+}
+
+@media (max-width: 400px) {
+    .price-col {
+        width: 80%;
+    }
+
+    .price-col.recommended {
+        width: 85%;
+    }
+
+    .price {
+        font-size: 2.5rem;
+    }
+
+    .dollar-sign {
+        font-size: 1.1rem;
+        margin-right: 0.2rem;
+    }
+
+    .per-month {
+        font-size: 0.7rem;
+        margin-bottom: 0.9rem;
+    }
+
+    .plan-name {
+        font-size: 1rem;
+    }
+
+    .plan-feature {
+        margin: 0.5rem;
+        font-size: 0.8rem;
+    }
+
+    .most-recommended {
+        font-size: 0.85rem;
+        right: 5rem;
+        left: 5rem;
+    }
+
+    .purchase-btn {
+        font-size: 1rem;
     }
 }
