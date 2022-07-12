@@ -22,7 +22,7 @@ $('.comment-slider').slick({
     slidesToScroll: 1,
     autoplay: true,
     autoplaySpeed: 5000,
-    dots: true,
+    dots: false,
     arrow: true,
     responsive: [
         {
@@ -58,7 +58,7 @@ $('.logo-slider').slick({
     slidesToScroll: 1,
     autoplay: true,
     autoplaySpeed: 5000,
-    dots: true,
+    dots: false,
     arrow: true,
     responsive: [
         {
